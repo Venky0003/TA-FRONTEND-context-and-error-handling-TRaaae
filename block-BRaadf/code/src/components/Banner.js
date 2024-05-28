@@ -1,8 +1,10 @@
 import React from "react";
+import { DarkModeContext } from "./DarkModeContext";
 
 class Banner extends React.Component {
+  static contextType = DarkModeContext
   render() {
-    let { isDarkMode } = this.props;
+    const { isDarkMode } =this.context;
     return (
       <div
         className={
